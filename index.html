@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Piano | PianoPlay</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <audio src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav" id="white-1"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav" id="black-1"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav" id="white-2"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav" id="black-2"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav" id="white-3"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav" id="white-4"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav" id="black-3"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav" id="white-5"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav" id="black-4"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav" id="white-6"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav" id="black-5"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav" id="white-7"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav" id="white-8"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav" id="black-6"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav" id="white-9"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav" id="black-7"></audio>
+    <audio  src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav" id="white-10"></audio>
+
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <ion-icon name="musical-note-outline" class="website-icon"></ion-icon>
+                <p>PianoPlay</p>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="hamburger-line"><ion-icon name="arrow-forward-outline" class="hamburger-arrow"></ion-icon></span>
+                <span class="hamburger-line"><ion-icon name="arrow-back-outline" class="hamburger-arrow hamburger-arrow-two"></ion-icon></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="piano-div-helper">
+        <div class="piano-div">
+            <h1>Piano Play</h1>
+            <div class="piano-settings">
+                <div class="settings-div">
+                    <label class="container">Show Keys
+                        <input type="checkbox" checked id="show-keys">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="piano">
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-1" onclick="pianoWhiteOne()">
+                        <p class="piano-letter">A</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-1" onclick="pianoBlackOne()">
+                        <p class="piano-letter">W</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-2" onclick="pianoWhiteTwo()">
+                        <p class="piano-letter">S</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-2" onclick="pianoBlackTwo()">
+                        <p class="piano-letter">E</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-3" onclick="pianoWhiteThree()">
+                        <p class="piano-letter">D</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-4" onclick="pianoWhiteFour()">
+                        <p class="piano-letter">F</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-3" onclick="pianoBlackThree()">
+                        <p class="piano-letter">T</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-5" onclick="pianoWhiteFive()">
+                        <p class="piano-letter">G</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-4" onclick="pianoBlackFour()">
+                        <p class="piano-letter">Y</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-6" onclick="pianoWhiteSix()">
+                        <p class="piano-letter">H</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-5" onclick="pianoBlackFive()">
+                        <p class="piano-letter">U</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-7" onclick="pianoWhiteSeven()">
+                        <p class="piano-letter">J</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-8" onclick="pianoWhiteEight()">
+                        <p class="piano-letter">K</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-6" onclick="pianoBlackSix()">
+                        <p class="piano-letter">O</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-9" onclick="pianoWhiteNine()">
+                        <p class="piano-letter">L</p>
+                    </div>
+                    <div class="piano-key-black" id="piano-black-7" onclick="pianoBlackSeven()">
+                        <p class="piano-letter">P</p>
+                    </div>
+                </div>
+                <div class="piano-key">
+                    <div class="piano-key-white" id="piano-white-10" onclick="pianoWhiteTen()">
+                        <p class="piano-letter">;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>@ 2O23 PianoPlay</p>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

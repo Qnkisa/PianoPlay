@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-headings:'Odor Mean Chey', serif;
+    --ff-text:'Ubuntu', sans-serif;
+}
+
+header{
+    padding: 1rem 5rem;
+    color: white;
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.website-icon{
+    font-size: 3rem;
+}
+
+.nav-logo p{
+    font-family: var(--ff-headings);
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+    transition: color .3s;
+}
+
+nav ul li a:hover{
+    color: rgb(136, 136, 136);
+}
+
+.hamburger{
+    cursor: pointer;
+    position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+    display: none;
+}
+
+.hamburger-line{
+    display: block;
+}
+
+.hamburger-arrow{
+    font-size: 1.5rem;
+}
+
+.hamburger-arrow-two{
+    position: relative;
+    bottom: 11px;
+    right: 3px;
+}
+
+/*main container start*/
+
+.piano-div-helper{
+    padding: 0 3rem;
+}
+
+.piano-div{
+    max-width: 1300px;
+    margin: 100px auto;
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.piano-div h1{
+    text-align: center;
+    font-family: var(--ff-headings);
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.piano-settings{
+    width: 60%;
+    margin: 0 auto 30px;
+}
+
+.settings-div{
+    margin: auto;
+    width: 160px;
+}
+
+.settings-div p{
+    font-family: var(--ff-text);
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: var(--ff-text);
+}
+  
+  /* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: black;
+    border: 1px solid white;
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.piano{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 10px;
+    margin: 25px auto;
+    border-top: 5px solid white;
+}
+
+.piano-key{
+    position: relative;
+}
+
+.piano-key-white{
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+.piano-key-white p{
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    user-select: none;
+    font-family: var(--ff-headings);
+}
+
+.piano-key-black{
+    height: 250px;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    left: 65%;
+    z-index: 110;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.piano-key-black p{
+    left: 43%;
+    top: 10px;
+    font-family: var(--ff-headings);
+    position: relative;
+    user-select: none;
+}
+
+@keyframes buttonPlay {
+    0%{
+        outline: 7px solid blue;
+    }
+    100%{
+        outline: 7px solid blue;
+    }
+}
+
+/*footer start*/
+
+footer{
+    width: 100%;
+    margin-top: 200px;
+    padding: 2rem 5rem;
+    color: white;
+    background-color: black;
+}
+
+footer ul{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    list-style: none;
+}
+
+footer ul li a{
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+    color: white;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+footer ul li a:hover{
+    color: rgb(136, 136, 136);
+}
+
+.footer-bottom{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom p{
+    font-size: 1.25rem;
+    font-family: var(--ff-headings);
+}
+
+.footer-bottom span{
+    font-family: var(--ff-text);
+    opacity: 0.7;
+}
+
+/*about container start*/
+
+.about-container{
+    margin: 200px auto;
+    max-width: 1500px;
+    text-align: center;
+    padding: 0 5rem;
+}
+
+.about-container h1{
+    font-family: var(--ff-headings);
+    font-size: 3rem;
+}
+
+.about-container p{
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+    margin-bottom: 30px;
+}
+
+.about-container p a{
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+/*media queries start*/
+
+@media (max-width:900px) {
+    .piano-div{
+        margin: 75px auto;
+        padding: 2rem;
+    }
+
+    .piano-div h1{
+        font-size: 2.25rem;
+    }
+
+    .settings-div{
+        width: 140px;
+    }
+
+    .container{
+        font-size: 1.15rem;
+    }
+
+    .piano-key-white{
+        height: 250px;
+    }
+
+    .piano-key-black{
+        height: 150px;
+    }
+
+    .about-container{
+        margin: 100px auto;
+    }
+
+    .about-container h1{
+        font-size: 2rem;
+    }
+
+    .about-container p{
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:650px) {
+    header{
+        padding: 1rem 2rem;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        left: -100%;
+        background-color: black;
+        z-index: 100;
+        display: block;
+        text-align: center;
+        border-bottom: 2px solid white;
+    }
+
+    nav ul li{
+        margin: 20px auto 40px;
+
+    }
+
+    #menu.active{
+        left: 0;
+    }
+
+    .hamburger.active .hamburger-arrow{
+        rotate: 180deg;
+        transition: all .3s;
+    }
+
+    .piano-key-white{
+        height: 150px;
+    }
+
+    .piano-key-black{
+        height: 80px;
+    }
+
+    .piano-key-black p,.piano-key-white p{
+        font-size: 0.75rem;
+    }
+
+    .piano-div-helper{
+        padding: 0 1rem;
+    }
+
+    .piano-div{
+        padding: 1rema;
+    }
+}
+
+@media (max-width:550px) {
+    .about-container{
+        padding: 0 1rem;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width:450px) {
+    .piano-key-white{
+        height: 115px;
+    }
+
+    .piano-key-black{
+        height: 60px;
+        left: 80%;
+    }
+
+    footer{
+        margin-top: 300px;
+    }
+
+    footer ul{
+        display: block;
+    }
+
+    footer ul li{
+        margin: 20px auto;
+        text-align: center;
+    }
+}
